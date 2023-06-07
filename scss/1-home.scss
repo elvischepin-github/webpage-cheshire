@@ -1,0 +1,383 @@
+.container-home {
+  @include shadow-inset-stronger;
+  position: relative;
+  background: url(../images/city.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    // Left side legend
+    .container-intro-form {
+      @include flex-center;
+      justify-content: space-around;
+      width: 100%;
+      height: 100%;
+      margin-left: 20px;
+      .containter-intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+        margin-top: 120px;
+        margin-right: 30px;
+        img {
+          @include drop-shadow;
+        }
+        .quote {
+          @include shadow-t1;
+          font-size: 36px;
+          line-height: 50px;
+          letter-spacing: 4px;
+          font-weight: bold;
+          margin-bottom: 15px;
+        }
+        hr {
+          @include drop-shadow;
+          width: 85px;
+          height: 3px;
+          background: white;
+          margin-top: 10px;
+          margin-bottom: 25px;
+        }
+        p {
+          @include shadow-t1;
+          font-size: 18px;
+          line-height: 30px;
+          min-width: 400px;
+        }
+        button {
+          @include shadow-pop;
+          @include shadow-t1;
+          border: 2px solid white;
+          border-radius: 15px;
+          font-size: 16px;
+          letter-spacing: 3px;
+          color: white;
+          background: none;
+          width: 180px;
+          height: 50px;
+          margin-top: 50px;
+          transition: 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+          &:hover {
+            cursor: pointer;
+            text-shadow: 0 1px 1px white;
+            box-shadow: 1px 1px 5px white; //Custom shadow, differs from 'GET STARTED' because other's box cannot be shadowed
+            letter-spacing: 6px;
+            scale: 1.1;
+          }
+        }
+      }
+      // Right side form
+      .container-form {
+        @include shadow-light;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: white;
+        width: 450px;
+        animation: bouncing 2s infinite alternate;
+        margin-right: 50px;
+        margin-top: 200px;
+        border-radius: 15px;
+        @keyframes bouncing {
+          from {
+            transform: translateY(0);
+          }
+
+          to {
+            transform: translateY(10px);
+          }
+        }
+        .form-top {
+          @include flex-center;
+          // box-shadow: 0 0 1px black; // Specific shadow to separate // Decided to remove
+          font-size: 18px;
+          white-space: nowrap;
+          letter-spacing: 2px;
+          font-weight: bold;
+          background: $grey;
+          text-align: center;
+          height: 65px;
+          padding: 0 20px;
+          border-top-right-radius: 15px;
+          border-top-left-radius: 15px;
+          span {
+            color: $hotOrange;
+            margin: 0 5px;
+            font-size: 20px;
+            letter-spacing: 4px;
+            text-shadow: 1px 1px 1px black;
+          }
+        }
+        .form-middle {
+          form {
+            #monthly,
+            #yearly {
+              margin-right: 0;
+            }
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            p {
+              font-size: 16px;
+              font-weight: bold;
+              margin: 15px 50px 15px 50px;
+            }
+            input {
+              font-size: 14px;
+              border: none;
+              border-bottom: 2px solid $grey;
+              margin: 5px 60px 30px 60px;
+              width: 70%;
+            }
+            div.radio {
+              display: flex;
+              flex-direction: row;
+              margin-right: 50px;
+              input[type='radio'] {
+                position: relative;
+                appearance: none;
+                width: 20px;
+                height: 20px;
+                border: 3px solid $green;
+                border-radius: 20px;
+                &:checked + label {
+                  color: black;
+                  font-weight: bold;
+                }
+                &::before {
+                  position: absolute;
+                  content: '';
+                  width: 8px;
+                  height: 8px;
+                  top: 0;
+                  right: 0;
+                  left: 0;
+                  bottom: 0;
+                  margin: auto;
+                  background: $green;
+                  border-radius: 20px;
+                  transform: scale(0);
+                }
+                &:checked::before {
+                  transform: scale(1);
+                  transition: filter 0.2s;
+                  filter: drop-shadow(0 0 1px black);
+                  transform: translateZ(1px); // Specific shadow
+                }
+              }
+              label {
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top: 7px;
+                font-size: 12px;
+              }
+            }
+          }
+          .form-bottom {
+            @include flex-center;
+            height: 65px;
+            width: 100%;
+            text-align: center;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            background: $green;
+            #get-started {
+              // box-shadow: 0 0 2px black; // Specific shadow to separate // Decided to remove
+              text-shadow: 1px 1px 1px black;
+              font-size: 18px;
+              font-weight: bold;
+              color: white;
+              letter-spacing: 3px;
+              border: none;
+              border-bottom-right-radius: 15px;
+              border-bottom-left-radius: 15px;
+              background: transparent;
+              width: 100%;
+              height: 100%;
+              margin: 0;
+              transition: 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+              &:hover {
+                cursor: pointer;
+                text-shadow: 0 1px 1px white;
+                letter-spacing: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// @MEDIA@MEDIA@MEDIA@MEDIA@MEDIA@MEDIA <---------
+@media (max-width: 1336px) {
+  main.container-home {
+    min-height: 1024px; // Edited from 768px
+    div.overlay {
+      // Left side legend
+      section.container-intro-form {
+        div.containter-intro {
+          align-items: center;
+          text-align: center;
+          p.quote {
+            font-size: 28px; // was 36px
+            line-height: 40px; // Was 50px
+          }
+          hr {
+            margin-top: 5px;
+            margin-bottom: 15px;
+          }
+          p {
+            font-size: 16px; // Was 18px
+          }
+          button {
+            margin-top: 30px;
+            &:hover {
+              letter-spacing: 4px;
+              scale: 1.05;
+            }
+          }
+        }
+        // Right side form
+        .container-form {
+          width: 350px;
+          .form-top {
+            font-size: 16px; // Was 18px
+            span {
+              font-size: 18px; // Was 20px
+            }
+          }
+          .form-middle {
+            form {
+              p {
+                font-size: 14px; // Was 16px
+              }
+              input {
+                font-size: 12px; // Was 14px
+              }
+              div.radio {
+                label {
+                  font-size: 10px;
+                }
+              }
+            }
+            .form-bottom {
+              #get-started {
+                font-size: 16px; // Was 18px
+                &:hover {
+                  letter-spacing: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// @MEDIA@MEDIA@MEDIA@MEDIA@MEDIA@MEDIA <---------
+@media (max-width: 768px) {
+  main.container-home {
+    min-height: 1024px;
+    div.overlay {
+      // Left side legend
+      section.container-intro-form {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0; // For column
+        div.containter-intro {
+          margin-top: 0;
+          margin-right: 0; // For column
+          img {
+            margin-top: 60px;
+          }
+          p.quote {
+            font-size: 24px; // Was 28px
+          }
+          hr {
+            margin-top: 0;
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 14px; // Was 16px
+            min-width: 80px;
+            line-height: 25px;
+            margin: 0 10px;
+          }
+          button {
+            margin-top: 15px;
+            margin-bottom: 25px;
+            font-size: 14px; // Was 16px
+          }
+        }
+        // Right side form
+        .container-form {
+          margin-top: 0; // For column
+          margin-right: 0; // For column
+          animation: none;
+          .form-top {
+            font-size: 14px; // Was 16
+            height: 45px;
+            span {
+              font-size: 16px; // Was 18
+            }
+          }
+          .form-middle {
+            form {
+              input {
+                margin: 5px 60px 10px 60px;
+              }
+            }
+            .form-bottom {
+              height: 45px;
+              #get-started {
+                font-size: 14px; // Was 16px
+                height: 65px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// @MEDIA@MEDIA@MEDIA@MEDIA@MEDIA@MEDIA <---------
+@media (max-width: 414px) {
+  main.container-home {
+    min-height: 896px;
+    div.overlay {
+      // Left side legend
+      section.container-intro-form {
+        div.containter-intro {
+          img {
+            margin-top: 40px;
+          }
+          p.quote {
+            margin-top: 10px;
+            font-size: 20px; // Was 24px
+            line-height: 25px;
+          }
+          p {
+            font-size: 12px; // Was 14px
+            line-height: 20px; // Was 25px
+          }
+          button {
+            font-size: 12px; // Was 14px
+            height: 40px;
+            width: 150px;
+          }
+        }
+        // Right side form
+        .container-form {
+          width: 290px;
+        }
+      }
+    }
+  }
+}

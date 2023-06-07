@@ -1,0 +1,19 @@
+.swiper {
+  max-width: 1000px;
+  height: 300px;
+  .swiper-wrapper {
+    .swiper-slide {
+      p {
+        background: $blue;
+        color: white;
+        text-align: left;
+        padding: 25px;
+        line-height: 22px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .swiper-pagination {
+  }
+}

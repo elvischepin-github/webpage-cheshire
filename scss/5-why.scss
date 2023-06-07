@@ -1,0 +1,170 @@
+.container-why {
+  box-shadow: inset 0px 0px 100px -80px $orangish; // Specific with adapted color
+  @include flex-center-column;
+  background: white;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  z-index: 1;
+  // Top title, division and sentence
+  .top-div-title {
+    @include flex-center-column;
+    margin-bottom: 30px;
+    h2 {
+      letter-spacing: 15px;
+      font-size: 52px;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    }
+    hr {
+      filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+      transform: translateZ(1px);
+      height: 2px;
+      background: $orangish;
+      border: none;
+      width: 650px;
+      margin: 100px auto;
+    }
+    p {
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      color: $darkGrey;
+      letter-spacing: 1px;
+      padding-bottom: 20px;
+    }
+  }
+  // Bottom of points
+  .bottom-div-points {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 50px auto;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    @keyframes bouncing {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(10px);
+      }
+    }
+    p:nth-of-type(1) {
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+      font-size: 1.4em;
+      text-align: center;
+      padding: 10px 0;
+    }
+    p:nth-of-type(2) {
+      text-align: center;
+      line-height: 25px;
+      width: 300px;
+      color: $darkGrey;
+    }
+    img {
+      @include drop-shadow-icons;
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      top: 14px;
+      left: 14px;
+    }
+    .award {
+      animation: bouncing 2s infinite alternate-reverse;
+    }
+    .lotus {
+      animation: bouncing 2s infinite alternate-reverse;
+      animation-delay: 0.3s;
+    }
+    .visa {
+      animation: bouncing 2s infinite alternate-reverse;
+      animation-delay: 0.6s;
+    }
+    .award,
+    .lotus,
+    .visa {
+      @include flex-center-column;
+    }
+    .image-box-award,
+    .image-box-lotus,
+    .image-box-visa {
+      position: relative;
+      border: 1px solid $hotOrange;
+      box-shadow: 0px 0 6px -3px black, inset 0px 0 5px -1px $hotOrange;
+      border-radius: 100px;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
+  }
+}
+// @MEDIA@MEDIA@MEDIA@MEDIA@MEDIA@MEDIA <---------
+@media (max-width: 1116px) {
+  main.container-why {
+    height: auto;
+    // Top
+    div.top-div-title {
+      @include flex-center;
+      margin-top: 80px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      h2 {
+        font-size: 45px;
+        max-width: 800px;
+        line-height: 70px;
+      }
+      hr {
+        margin: 60px auto;
+        width: 250px;
+      }
+    }
+    // Bottom
+    div.bottom-div-points {
+      margin: 0 auto;
+      margin-bottom: 40px;
+      flex-direction: column;
+      div.award,
+      div.lotus,
+      div.visa {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+// @MEDIA@MEDIA@MEDIA@MEDIA@MEDIA@MEDIA <---------
+@media (max-width: 768px) {
+  main.container-why {
+    // Top
+    div.top-div-title {
+      @include flex-center;
+      h2 {
+        font-size: 32px;
+        line-height: 50px;
+      }
+      hr {
+        margin: 40px auto;
+        width: 250px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    // Bottom
+    div.bottom-div-points {
+      p:nth-of-type(1) {
+        font-size: 16px;
+      }
+      p:nth-of-type(2) {
+        font-size: 14px;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      .image-box-award,
+      .image-box-lotus,
+      .image-box-visa {
+        width: 69px;
+        height: 69px;
+      }
+    }
+  }
+}

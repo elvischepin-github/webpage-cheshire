@@ -1,0 +1,50 @@
+// Flex
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+// Shadows
+@mixin drop-shadow {
+  filter: drop-shadow(1px 2px 1px black);
+  transform: translateZ(1px);
+}
+@mixin drop-shadow-soft {
+  filter: drop-shadow(0 1px 0 black);
+  transform: translateZ(1px);
+}
+@mixin drop-shadow-icons {
+  filter: drop-shadow(0 1px 1px gray);
+  transform: translateZ(1px);
+}
+// Shadows of text
+@mixin shadow-t1 {
+  text-shadow: 2px 2px 3px black;
+}
+// Shadow for divs
+@mixin shadow-light {
+  box-shadow: 0px 2px 6px 0px black;
+}
+@mixin shadow-medium {
+  box-shadow: 0px 5px 6px 5px black;
+}
+@mixin shadow-extrude {
+  box-shadow: 0 0 20px -10px black;
+}
+// Shadow to pop out things like button
+@mixin shadow-pop {
+  box-shadow: 0px 2px 5px 1px black;
+}
+// Shadow (inner) for pages
+@mixin shadow-inset-light {
+  box-shadow: inset 0px 0px 10px -3px black;
+}
+@mixin shadow-inset-stronger {
+  box-shadow: inset 0px 0px 20px 0 black;
+}

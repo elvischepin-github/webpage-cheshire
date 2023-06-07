@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cheshire Services</title>
+    <!-- Swiper CSS ------->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- My CSS ------->
+    <link rel="stylesheet" href="app/css/style.css" />
+    <!-- Fixing scroll position on reload ------->
+    <script>
+      history.scrollRestoration = 'manual';
+    </script>
+  </head>
+
+  <body>
+    <!-- 0-Fixed navbar ------->
+    <header id="home">
+      <nav class="navbar">
+        <a href="#home"><img src="app/images/logo.name.svg" alt="logo" /></a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reviews">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 1-Home main ------->
+    <main class="container-home">
+      <div class="overlay">
+        <section class="container-intro-form">
+          <!-- intro div ------->
+          <div class="containter-intro">
+            <img
+              id="gif"
+              src="app/images/livelogo.png"
+              loading="lazy"
+              alt="logo" />
+            <p class="quote">
+              Explained propriety<br />
+              of out perpetual to you
+            </p>
+            <hr />
+            <p>
+              Insipidity the sufficient discretion imprudence resolution sir him
+              decisively.<br />
+              Feel sold off felt nay rose met you. We so entreaties cultivated
+              astonished is.
+            </p>
+            <button>DOWNLOAD</button>
+          </div>
+
+          <!-- form div ------->
+          <div class="container-form">
+            <div class="form-top">
+              Start Your <span> FREE </span> Trial Today
+            </div>
+            <div class="form-middle">
+              <form action="#">
+                <p>Your details</p>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  placeholder="First name"
+                  required />
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  placeholder="Last name"
+                  required />
+                <input
+                  type="number"
+                  name="number"
+                  id="number"
+                  placeholder="Phone number"
+                  required />
+                <p>Type of subscription</p>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    id="monthly"
+                    name="type-of-subscription"
+                    value="monthly"
+                    required />
+                  <label for="monthly">Monthly</label>
+                  <input
+                    type="radio"
+                    id="yearly"
+                    name="type-of-subscription"
+                    value="yearly"
+                    required />
+                  <label for="yearly">Yearly</label>
+                </div>
+                <div class="form-bottom">
+                  <input type="submit" id="get-started" value="GET STARTED" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- 2-social media article ------->
+    <article class="container-social-media">
+      <div class="social-media-text">
+        <h3>Social Media</h3>
+        <p>
+          Lorem ipsum dolor sit amet, adipiscing elit.<br />
+          Aenean euismod bibendum laoreet.
+        </p>
+      </div>
+      <div class="social-media-icons">
+        <img src="app/images/facebook.svg" alt="facebook" />
+        <img src="app/images/instagram.svg" alt="instagram" />
+        <img src="app/images/twitter.svg" alt="twitter" />
+        <img src="app/images/pinterest.svg" alt="pinterest" />
+        <img src="app/images/wifi.svg" alt="wifi" />
+      </div>
+    </article>
+
+    <!-- 3-features main ------->
+    <main id="features" class="container-features">
+      <div class="overlay">
+        <section class="container-tabs-images">
+          <!-- tab buttons ------->
+          <div class="container-tabs">
+            <div class="first-tab">
+              <button
+                class="selected"
+                id="first"
+                index="0"
+                onclick="displayTab('register')">
+                <p>REGISTER</p>
+              </button>
+            </div>
+            <div class="second-tab">
+              <button index="1" onclick="displayTab('apply')">
+                <p>APPLY</p>
+              </button>
+            </div>
+            <div class="third-tab">
+              <button index="2" onclick="displayTab('receive')">
+                <p>RECEIVE</p>
+              </button>
+            </div>
+          </div>
+
+          <!-- added-tabs ------->
+          <div class="added-tabs">
+            <div id="register" class="tab">
+              <h3>Tabs with soft transitioning effects!</h3>
+              <p>
+                Thunder fast and responsive! Experience that brings us our most
+                valuable people!
+                <br />
+                Explained prepriety of out perpetual his you. Test it, use it.
+                All in your hands!
+                <br />
+                Enjoy every second, it is our owl time!
+              </p>
+            </div>
+            <div id="apply" class="tab">
+              <h3>Lorem ipsum, dolor sit amet adipisicing?</h3>
+              <p>
+                Quis maiores placeat qui asperiores! Enim, corrupti! Rerum, vel
+                perspiciatis!
+                <br />
+                Similique maxime possimus natus incidunt rem omnis, qui quis
+                odit ullam
+                <br />
+                rerum necessitatibus exercitationem totam voluptas facilis optio
+                dolores.
+                <br />
+                A iusto facilis ut unde placeat commodi quis repellat doloremque
+                error?
+              </p>
+            </div>
+
+            <div id="receive" class="tab">
+              <h3>Quam consequatur ipsum dolor protesis...</h3>
+              <p>
+                Eum alias quo neque earum aperiam distinctio accusamus officia
+                <br />
+                dignissimos minima architecto tempora officiis totam modi iste
+                molestiae,
+                <br />
+                nesciunt impedit doloremque. Ratione aliquam officia magnam
+                aperiam
+                <br />
+                provident, expedita minima voluptatum explicabo accusantium
+                magni
+                <br />
+                commodi aspernatur eos laudantium sequi, quas distinctio autem
+                voluptate.
+              </p>
+            </div>
+          </div>
+
+          <!-- images box ------->
+          <div class="container-images">
+            <div class="top-shelf">
+              <div class="lettuce-relative-box">
+                <img src="app/images/lettuce.jpg" alt="lettuce" />
+                <div class="lettuce-overlay">Explore</div>
+              </div>
+              <div class="veggies-relative-box">
+                <img src="app/images/veggies.jpg" alt="veggies" />
+                <div class="veggies-overlay">Explore</div>
+              </div>
+            </div>
+            <div class="bottom-shelf">
+              <img src="app/images/stairs.jpg" alt="stairs" />
+              <div class="stairs-overlay">Explore</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- 4-about footer ------->
+    <footer id="about" class="container-about-footer">
+      <!-- left side of the page ------->
+
+      <div class="image-box-left">
+        <img src="app/images/logo.svg" alt="" />
+      </div>
+
+      <!-- right side of the page ------->
+      <aside class="side-box-right">
+        <div class="first-aside-div">
+          <h3>
+            Bear market?<br />
+            We are bulling in!
+          </h3>
+          <hr />
+          <p>
+            Studies have shown that regular hygiene services, such as
+            professional cleaning and sanitization, can significantly reduce the
+            spread of germs and bacteria by up to 80%.
+          </p>
+        </div>
+
+        <!-- dot 1 ------->
+        <div class="second-aside-div">
+          <div class="eye-container">
+            <div class="image-eye-div">
+              <img src="app/images/eye.svg" alt="eye" />
+            </div>
+            <div class="text-eye-div">
+              <h5>For every dollar...</h5>
+              <p>
+                ...invested in hygiene, the return on investment can be as high
+                as $4.30 due to reduced sick leave and improved employee
+                well-being.
+              </p>
+            </div>
+          </div>
+
+          <!-- dot 2 ------->
+          <div class="chat-container">
+            <div class="image-chat-div">
+              <img src="app/images/chat.svg" alt="chat" />
+            </div>
+            <div class="text-chat-div">
+              <h5>Workplaces that...</h5>
+              <p>
+                ...prioritize hygiene services experience an increase in
+                employee productivity by up to 12%.
+              </p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </footer>
+
+    <!-- 5-why main ------->
+    <main class="container-why">
+      <div class="top-div-title">
+        <h2>WHY THIS IS AWESOME</h2>
+        <hr />
+        <p><i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</i></p>
+      </div>
+      <div class="bottom-div-points">
+        <div class="award">
+          <div class="image-box-award">
+            <img src="app/images/award.svg" alt="award" />
+          </div>
+          <p>Thoughtful Design</p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            euismod ibendum laoreet.
+          </p>
+        </div>
+        <div class="lotus">
+          <div class="image-box-lotus">
+            <img src="app/images/lotus.svg" alt="lotus" />
+          </div>
+          <p>Well Crafted</p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean
+            euismod bibendum.
+          </p>
+        </div>
+        <div class="visa">
+          <div class="image-box-visa">
+            <img src="app/images/visa.svg" alt="visa" />
+          </div>
+          <p>Easy to Customize</p>
+          <br />
+          <p>Proin gravida dolor sit amet lacus accumsan et viverra.</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- 6-pricing main ------->
+    <main id="pricing" class="container-pricing">
+      <div class="div-pricing-top">
+        <p>PRICING OPTIONS</p>
+        <hr />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="div-pricing-bottom">
+        <div class="pricing-basic">
+          <div class="price-basic">
+            <p>Basic</p>
+            <p><span>$</span>0</p>
+            <p>Free for Life</p>
+          </div>
+          <div class="green-bar-basic">GIVE IT A TRY</div>
+          <div class="list-basic">
+            <p>1GB OF SPACE</p>
+            <p>10 GB OF BANDWIDTH</p>
+            <p>3 WEBSITES</p>
+            <p>BASIC CUSTOMIZATION</p>
+            <p>WORDPRESS INTEGRATION</p>
+            <p>EMAIL SUPPORT</p>
+          </div>
+        </div>
+
+        <div class="pricing-professional">
+          <div class="price-professional">
+            <p>Professional</p>
+            <p><span>$</span>19</p>
+            <p>Monthly Payment</p>
+          </div>
+          <div class="green-bar-professional">OUR MOST POPULAR</div>
+          <div class="list-professional">
+            <p>5 GB OF SPACE</p>
+            <p>50 GB OF BANDWIDTH</p>
+            <p>12 WEBSITES</p>
+            <p>ADVANCED CUSTOMIZATION</p>
+            <p>WORDPRESS INTEGRATION</p>
+            <p>EMAIL SUPPORT</p>
+          </div>
+        </div>
+
+        <div class="pricing-enterprise">
+          <div class="price-enterprise">
+            <p>Enterprise</p>
+            <p><span>$</span>70</p>
+            <p>Monthly Payment</p>
+          </div>
+          <div class="green-bar-enterprise">ADVANCED</div>
+          <div class="list-enterprise">
+            <p>UNLIMITED SPACE</p>
+            <p>UNLIMITED BANDWIDTH</p>
+            <p>100 WEBSITES</p>
+            <p>ADVANCED CUSTOMIZATION</p>
+            <p>WORDPRESS INTEGRATION</p>
+            <p>24/7 CUSTOMER SUPPORT</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 7-reviews main ------->
+    <main id="reviews" class="container-reviews">
+      <div class="reviews-top">
+        <p>WHAT OUR CUSTOMERS ARE SAYING</p>
+        <hr />
+      </div>
+
+      <!-- swiper ------->
+      <!-- Slider main container------->
+      <div class="swiper">
+        <!-- Additional required wrapper ------->
+        <div class="swiper-wrapper">
+          <!-- Slides ------->
+          <div class="swiper-slide">
+            <p id="avatar-1-after">
+              Less about me, more about my service, that is a deal breaker in
+              business and no business these days can thrive without web
+              applications.
+            </p>
+            <label id="name">Jerem H.</label>
+            <label id="profession">Mananger</label>
+          </div>
+          <div class="swiper-slide">
+            <p id="avatar-2-after">
+              My content was improved tremendously, can't stress enough about
+              the importance of having any type of webpage! Thx!
+            </p>
+            <label id="name">John S.</label>
+            <label id="profession">Freelancer</label>
+          </div>
+          <div class="swiper-slide">
+            <p id="avatar-3-after">
+              Now my clients will be informed about everything I have to offer.
+              Finally, no more worries about missing something out. Schedule...
+            </p>
+            <label id="name">Jeff W.</label>
+            <label id="profession">Actor</label>
+          </div>
+          <div class="swiper-slide">
+            <p id="avatar-4-after">
+              First of all, thank you! My private business skyrocketed after
+              committing to have a site. Nothing gets out of sight now. Sounds
+              good to me.
+            </p>
+            <label id="name">Lara Z.</label>
+            <label id="profession">Doctor</label>
+          </div>
+        </div>
+        <!-- If we need pagination ------->
+        <div class="swiper-pagination"></div>
+      </div>
+    </main>
+
+    <!-- 8-contact main ------->
+    <main id="contact" class="container-contact">
+      <div class="contact-top">
+        <p>CONTACT US</p>
+        <p>See You again soon!</p>
+      </div>
+      <div class="contact-bottom">
+        <form action="#">
+          <input required type="text" placeholder="First name" />
+          <input required type="text" placeholder="Last name" />
+          <input required type="number" placeholder="Phone number" />
+          <div class="radio">
+            <input
+              type="radio"
+              id="personal"
+              name="type-of-subscription"
+              value="personal"
+              required />
+            <label for="personal">Personal</label>
+            <input
+              required
+              type="radio"
+              id="company"
+              name="type-of-subscription"
+              value="company"
+              required />
+            <label required for="company">Company</label>
+            <br />
+          </div>
+          <input id="contact-button" value="SEND" type="submit" />
+        </form>
+      </div>
+    </main>
+
+    <!-- 9-container-footer ------->
+    <main id="contact" class="container-footer">
+      <div class="footer-logos">
+        <img src="app/images/facebook.f.svg" alt="facebook" />
+        <img src="app/images/instagram.f.svg" alt="instagram" />
+        <img src="app/images/twitter.f.svg" alt="twitter" />
+        <img src="app/images/pinterest.f.svg" alt="pinterest" />
+        <img src="app/images/wifi.f.svg" alt="wifi" />
+      </div>
+      <div class="footer-corp">© 2019 Cheshire Country</div>
+    </main>
+
+    <!-- swiper script ------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- my script ------->
+    <script src="swiper.js"></script>
+  </body>
+</html>

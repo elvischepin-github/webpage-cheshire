@@ -1,0 +1,242 @@
+.container-reviews {
+  box-shadow: inset 0px 0px 100px -80px $blue; // Specific with adapted color
+  height: 100vh;
+  padding: 0 20px;
+  background: white;
+  .reviews-top {
+    @include flex-center;
+    flex-direction: column;
+    p {
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+      height: 30px;
+      margin-top: 80px;
+      margin-bottom: 40px;
+      padding-top: 80px;
+      padding-bottom: 30px;
+      text-align: center;
+      font-size: 42px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+    hr {
+      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+      transform: translateZ(1px);
+      height: 2px;
+      border: none;
+      width: 400px;
+      margin: 100px 0;
+      background: $blue;
+    }
+  }
+  .swiper {
+    max-width: 1000px;
+    height: 400px;
+    .swiper-wrapper {
+      .swiper-slide {
+        padding-right: 0px;
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+        p#avatar-1-after {
+          position: relative;
+          &::after {
+            position: absolute;
+            content: '';
+            background-image: url(../images/avatar1.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 60px;
+            height: 60px;
+            top: 107.5%;
+            right: 67.5%;
+            border: 3px solid $blue;
+            border-radius: 100%;
+            @include shadow-light;
+          }
+        }
+        p#avatar-2-after {
+          position: relative;
+          &::after {
+            position: absolute;
+            content: '';
+            background-image: url(../images/avatar2.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 60px;
+            height: 60px;
+            top: 107.5%;
+            right: 67.5%;
+            border: 3px solid $blue;
+            border-radius: 100%;
+            @include shadow-light;
+          }
+        }
+        p#avatar-3-after {
+          position: relative;
+          &::after {
+            position: absolute;
+            content: '';
+            background-image: url(../images/avatar3.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 60px;
+            height: 60px;
+            top: 107.5%;
+            right: 67.5%;
+            border: 3px solid $blue;
+            border-radius: 100%;
+            @include shadow-light;
+          }
+        }
+        p#avatar-4-after {
+          position: relative;
+          &::after {
+            position: absolute;
+            content: '';
+            background-image: url(../images/avatar4.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 60px;
+            height: 60px;
+            top: 107.5%;
+            right: 67.5%;
+            border: 3px solid $blue;
+            border-radius: 100%;
+            @include shadow-light;
+          }
+        }
+        p {
+          position: relative;
+          text-align: left;
+          line-height: 22px;
+          border-radius: 15px;
+          padding: 25px;
+          margin-bottom: 20px;
+          background: $blue;
+          color: white;
+          box-shadow: 0 0 10px -1px black;
+          &::before {
+            z-index: -1;
+            position: absolute;
+            content: '';
+            top: 94%;
+            left: 14%;
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            transform: rotate(45deg);
+            background: $blue;
+            box-shadow: 0 0 10px -1px black;
+          }
+        }
+      }
+      label#name {
+        position: absolute;
+        top: 245px;
+        left: 90px;
+        font-size: 1.2em;
+      }
+      label#profession {
+        position: absolute;
+        top: 270px;
+        left: 90px;
+        font-style: italic;
+        color: $darkGrey;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+    }
+    .swiper-pagination-bullet {
+      box-shadow: 0 0 3px 1px black;
+      transition: 1s;
+      width: 15px;
+      height: 15px;
+      background: $blue;
+      margin-bottom: 30px;
+    }
+  }
+}
+// @MEDIA@MEDIA@MEDIA@MEDIA@MEDIA@MEDIA <---------
+@media (max-width: 1336px) {
+  main.container-reviews {
+    min-height: 1024px;
+  }
+}
+// @MEDIA@MEDIA@MEDIA@MEDIA@MEDIA@MEDIA <---------
+@media (max-width: 1000px) {
+  main.container-reviews {
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          p {
+            width: 230px;
+          }
+          p#avatar-1-after {
+            &::after {
+              top: 110%;
+              right: 61%;
+            }
+          }
+          p#avatar-2-after {
+            &::after {
+              top: 110%;
+              right: 61%;
+            }
+          }
+          p#avatar-3-after {
+            &::after {
+              top: 110%;
+              right: 61%;
+            }
+          }
+          p#avatar-4-after {
+            &::after {
+              top: 110%;
+              right: 61%;
+            }
+          }
+          p {
+            &::before {
+              top: 94%;
+              left: 20%;
+            }
+          }
+        }
+        label#name {
+          top: 61%;
+          left: 47%;
+        }
+        label#profession {
+          top: 67%;
+          left: 47%;
+        }
+      }
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}
+// @MEDIA@MEDIA@MEDIA@MEDIA@MEDIA@MEDIA <---------
+@media (max-width: 751px) {
+  main.container-reviews {
+    div.reviews-top {
+      p {
+        margin-bottom: 15px;
+        font-size: 36px;
+      }
+      hr {
+        width: 200px;
+        margin-top: 120px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+// ---------> @MEDIA@MEDIA@MEDIA@MEDIA@MEDIA@MEDIA
+@media (max-height: 900px) {
+  main.container-reviews {
+    min-height: 900px;
+  }
+}

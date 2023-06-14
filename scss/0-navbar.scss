@@ -1,8 +1,9 @@
 header {
   position: relative;
-  z-index: 999 !important;
+  z-index: 1;
   .navbar {
     background-color: black;
+    z-index: 999 !important;
     position: fixed;
     top: 0;
     height: 100px;

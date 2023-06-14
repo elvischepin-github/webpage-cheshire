@@ -12,6 +12,11 @@ html {
   scroll-padding-top: 100px;
 }
 
+body {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

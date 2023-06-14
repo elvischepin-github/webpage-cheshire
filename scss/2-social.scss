@@ -1,4 +1,6 @@
 .container-social-media {
+  position: relative;
+  z-index: 1;
   @include shadow-pop;
   display: flex;
   justify-content: space-around;

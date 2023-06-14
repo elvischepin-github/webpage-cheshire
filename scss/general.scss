@@ -10,6 +10,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  position: relative !important;
+  z-index: 1 !important;
 }
 
 body {

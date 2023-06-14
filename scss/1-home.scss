@@ -27,8 +27,6 @@
         margin-right: 30px;
         img {
           @include drop-shadow;
-          position: relative;
-          z-index: 1;
         }
         .quote {
           @include shadow-t1;

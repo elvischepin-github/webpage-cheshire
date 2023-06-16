@@ -1,6 +1,7 @@
 .container-home {
   @include shadow-inset-stronger;
   position: relative;
+  z-index: 1;
   background: url(../images/city.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,8 +46,6 @@
           background: white;
           margin-top: 10px;
           margin-bottom: 25px;
-          position: relative;
-          z-index: 1;
         }
         p {
           @include shadow-t1;

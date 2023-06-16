@@ -26,6 +26,8 @@
       width: 400px;
       margin: 100px 0;
       background: $blue;
+      position: relative;
+      z-index: 1;
     }
   }
   .swiper {

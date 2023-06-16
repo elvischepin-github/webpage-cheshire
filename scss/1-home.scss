@@ -25,10 +25,10 @@
         color: white;
         margin-top: 120px;
         margin-right: 30px;
-        position: relative;
-        z-index: 1;
         img {
           @include drop-shadow;
+          position: relative;
+          z-index: 1;
         }
         .quote {
           @include shadow-t1;
@@ -45,6 +45,8 @@
           background: white;
           margin-top: 10px;
           margin-bottom: 25px;
+          position: relative;
+          z-index: 1;
         }
         p {
           @include shadow-t1;

@@ -1,5 +1,5 @@
 .container-features {
-  @include shadow-inset-stronger;
+  box-shadow: inset 0px 0px 10px -5px black;
   position: relative;
   background: url(../images/desert.png);
   background-repeat: no-repeat;

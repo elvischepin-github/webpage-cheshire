@@ -1,10 +1,12 @@
 .container-pricing {
-  box-shadow: inset 0px 0px 20px -10px black;
+  box-shadow: inset 0px 0px 10px -10px black;
   background: $blue;
   height: auto;
   max-width: auto;
   padding-bottom: 90px;
   .div-pricing-top {
+    position: relative;
+    z-index: 1;
     @include flex-center-column;
     p:nth-of-type(1) {
       color: white;

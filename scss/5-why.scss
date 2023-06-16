@@ -5,11 +5,12 @@
   height: 100vh;
   width: 100%;
   margin: auto;
-  z-index: 1;
   // Top title, division and sentence
   .top-div-title {
     @include flex-center-column;
     margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
     h2 {
       letter-spacing: 15px;
       font-size: 52px;

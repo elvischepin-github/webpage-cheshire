@@ -100,9 +100,9 @@
             height: 60px;
             top: 107.5%;
             right: 67.5%;
-            border: 3px solid $blue;
+            border: 2px solid $blue;
             border-radius: 100%;
-            @include shadow-light;
+            box-shadow: 0px 2px 4px 0px black;
           }
         }
         p {
@@ -114,7 +114,7 @@
           margin-bottom: 20px;
           background: $blue;
           color: white;
-          box-shadow: 0 0 10px -1px black;
+          box-shadow: 0 0 3px black;
           &::before {
             z-index: -1;
             position: absolute;
@@ -126,7 +126,7 @@
             border-radius: 3px;
             transform: rotate(45deg);
             background: $blue;
-            box-shadow: 0 0 10px -1px black;
+            box-shadow: 0 0 3px black;
           }
         }
       }
@@ -146,7 +146,7 @@
       }
     }
     .swiper-pagination-bullet {
-      box-shadow: 0 0 3px 1px black;
+      box-shadow: 0 0 2px black;
       transition: 1s;
       width: 15px;
       height: 15px;
